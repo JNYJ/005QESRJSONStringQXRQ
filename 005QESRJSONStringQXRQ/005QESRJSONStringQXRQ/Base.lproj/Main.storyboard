@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="_05QESRJSONStringQXRQ" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,76 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="xOk-pL-N7k">
+                                <rect key="frame" x="180" y="28" width="240" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="Dan-PV-2sE"/>
+                                    <constraint firstAttribute="width" constant="240" id="uSs-Mx-T5p"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="JSON String"/>
+                                    <segment title="URL(JSON values)"/>
+                                </segments>
+                                <connections>
+                                    <action selector="event_switchControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="hks-T4-OY4"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fkd-E0-yv8">
+                                <rect key="frame" x="180" y="562" width="240" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Mvf-aa-aRv"/>
+                                    <constraint firstAttribute="width" constant="240" id="W3a-W4-GIx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Parse">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="event_parse" destination="BYZ-38-t0r" eventType="touchUpInside" id="s6X-xd-BuX"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="{&quot;JSON desc&quot; : {&quot;JSON String menu&quot;:&quot;Type in JSON String.&quot;, &quot;URL&quot;:&quot;Type in return JSON String with URL.&quot;}}" translatesAutoresizingMaskIntoConstraints="NO" id="GUZ-i7-GvO">
+                                <rect key="frame" x="16" y="64" width="569" height="490"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="490" id="5Zs-yU-9UY"/>
+                                    <constraint firstAttribute="width" constant="569" id="abr-Za-9ub"/>
+                                    <constraint firstAttribute="width" secondItem="GUZ-i7-GvO" secondAttribute="height" multiplier="569:490" id="w9i-II-OPt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="uq2-iA-d38"/>
+                                </connections>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="GUZ-i7-GvO" secondAttribute="centerX" constant="-0.5" id="0Vm-cE-hZy"/>
+                            <constraint firstAttribute="centerX" secondItem="xOk-pL-N7k" secondAttribute="centerX" id="2EF-yD-qUu"/>
+                            <constraint firstAttribute="width" secondItem="GUZ-i7-GvO" secondAttribute="height" multiplier="60:49" id="EtT-Ye-bQP"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fkd-E0-yv8" secondAttribute="bottom" constant="8" id="MLw-jS-Fgd"/>
+                            <constraint firstItem="GUZ-i7-GvO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="SSj-DK-H8u"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="GUZ-i7-GvO" secondAttribute="bottom" constant="46" id="Zpe-23-TiH"/>
+                            <constraint firstItem="xOk-pL-N7k" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="geo-Cj-Znr"/>
+                            <constraint firstAttribute="centerX" secondItem="fkd-E0-yv8" secondAttribute="centerX" id="lha-7g-zsD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GUZ-i7-GvO" secondAttribute="trailing" constant="-1" id="sAu-Q6-feb"/>
+                            <constraint firstItem="GUZ-i7-GvO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="44" id="tF5-ns-WUU"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="button_parse" destination="fkd-E0-yv8" id="aea-bd-LtK"/>
+                        <outlet property="switchControl" destination="xOk-pL-N7k" id="c0m-Il-5b2"/>
+                        <outlet property="textView" destination="GUZ-i7-GvO" id="LD6-n0-zVB"/>
+                        <outlet property="view" destination="8bC-Xf-vdC" id="0MR-ks-HYm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="296" y="420"/>
         </scene>
     </scenes>
 </document>

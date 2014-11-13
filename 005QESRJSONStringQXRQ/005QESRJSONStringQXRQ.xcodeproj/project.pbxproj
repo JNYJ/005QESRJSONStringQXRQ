@@ -13,6 +13,8 @@
 		7CAF154C1A144DA100253E64 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CAF154B1A144DA100253E64 /* Images.xcassets */; };
 		7CAF154F1A144DA100253E64 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CAF154D1A144DA100253E64 /* LaunchScreen.xib */; };
 		7CAF155B1A144DA100253E64 /* _05QESRJSONStringQXRQTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CAF155A1A144DA100253E64 /* _05QESRJSONStringQXRQTests.swift */; };
+		7CAF15651A144E3800253E64 /* JNYJJSONDic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CAF15641A144E3800253E64 /* JNYJJSONDic.swift */; };
+		7CAF15691A144E4A00253E64 /* JNYJJSONDic.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CAF15681A144E4A00253E64 /* JNYJJSONDic.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,10 @@
 		7CAF15541A144DA100253E64 /* 005QESRJSONStringQXRQTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 005QESRJSONStringQXRQTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CAF15591A144DA100253E64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7CAF155A1A144DA100253E64 /* _05QESRJSONStringQXRQTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _05QESRJSONStringQXRQTests.swift; sourceTree = "<group>"; };
+		7CAF15641A144E3800253E64 /* JNYJJSONDic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JNYJJSONDic.swift; sourceTree = "<group>"; };
+		7CAF15661A144E4A00253E64 /* 005QESRJSONStringQXRQ-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "005QESRJSONStringQXRQ-Bridging-Header.h"; sourceTree = "<group>"; };
+		7CAF15671A144E4A00253E64 /* JNYJJSONDic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JNYJJSONDic.h; sourceTree = "<group>"; };
+		7CAF15681A144E4A00253E64 /* JNYJJSONDic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JNYJJSONDic.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,10 +85,14 @@
 			children = (
 				7CAF15441A144DA100253E64 /* AppDelegate.swift */,
 				7CAF15461A144DA100253E64 /* ViewController.swift */,
+				7CAF15641A144E3800253E64 /* JNYJJSONDic.swift */,
+				7CAF15671A144E4A00253E64 /* JNYJJSONDic.h */,
+				7CAF15681A144E4A00253E64 /* JNYJJSONDic.m */,
 				7CAF15481A144DA100253E64 /* Main.storyboard */,
 				7CAF154B1A144DA100253E64 /* Images.xcassets */,
 				7CAF154D1A144DA100253E64 /* LaunchScreen.xib */,
 				7CAF15421A144DA100253E64 /* Supporting Files */,
+				7CAF15661A144E4A00253E64 /* 005QESRJSONStringQXRQ-Bridging-Header.h */,
 			);
 			path = 005QESRJSONStringQXRQ;
 			sourceTree = "<group>";
@@ -213,6 +223,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7CAF15471A144DA100253E64 /* ViewController.swift in Sources */,
+				7CAF15691A144E4A00253E64 /* JNYJJSONDic.m in Sources */,
+				7CAF15651A144E3800253E64 /* JNYJJSONDic.swift in Sources */,
 				7CAF15451A144DA100253E64 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -338,9 +350,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = 005QESRJSONStringQXRQ/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "005QESRJSONStringQXRQ/005QESRJSONStringQXRQ-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -348,9 +363,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = 005QESRJSONStringQXRQ/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "005QESRJSONStringQXRQ/005QESRJSONStringQXRQ-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -407,6 +424,7 @@
 				7CAF15601A144DA100253E64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7CAF15611A144DA100253E64 /* Build configuration list for PBXNativeTarget "005QESRJSONStringQXRQTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +433,7 @@
 				7CAF15631A144DA100253E64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
